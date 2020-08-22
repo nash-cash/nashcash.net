@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153430870-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-153430870-1');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" type="image/icon" href="favicon.ico">
+  <title>NashCash [NaCa] - Anonymous  Payments</title>
+  <!-- vendor css -->
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/Ionicons/css/ionicons.css" rel="stylesheet">
+  <link href="lib/chartist/css/chartist.css" rel="stylesheet">
+  <link href="lib/select2/css/select2.min.css" rel="stylesheet">
+  <link href="lib/datatables/css/jquery.dataTables.css" rel="stylesheet">
+  
+  <!-- third party css -->
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- slim CSS -->
+  <link rel="stylesheet" href="css/slim.css">
+  <link rel="stylesheet" href="css/slim.one.css">
+  <link rel="stylesheet" href="css/loading-indicator.css">
+
+  <!-- script files -->
+  
+  <script src="lib/jquery/js/jquery.js"></script>
+  <script src="lib/popper.js/js/popper.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="lib/jquery.cookie/js/jquery.cookie.js"></script>
+  <script src="lib/jquery.timeago/js/jquery.timeago.js"></script>
+  <script src="lib/select2/js/select2.full.min.js"></script>
+  <script src="lib/echarts/js/echarts.min.js"></script>
+  <script src="lib/moment/js/moment.js"></script>
+  <script src="lib/chart.js/js/Chart.js"></script>
+  <script src="lib/chartist/js/chartist.js"></script>
+  <script src="lib/datatables/js/jquery.dataTables.js"></script>
+  <script src="lib/jquery.sparkline.bower/js/jquery.sparkline.min.js"></script>
+
+  <script src="js/loading-indicator.min.js"></script>
+  <script src="js/ResizeSensor.js"></script>
+  <script src="js/palette.js"></script>
+  <script src="js/slim.js"></script>
+  
+  <script src="js/main.js"></script>
+  <script src="js/hash.js"></script>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="js/third-party.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script> 
+
+</head>
+
+<body>
+
+<!--page loader --->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
+<script>
+$(document).ready(function() {
+ 
+    setTimeout(function(){
+        $('body').addClass('loaded');
+        $('h1').css('color','#fff');
+    }, 2000);
+ 
+});
+</script>
+<!--page loader end-->
+
+  <div class="slim-header">
+    <div class="container">
+      <div class="slim-header-left">
+        <img src="img/logo.png" width="285" height="80" img-fluid>
+        <div class="logoText">
+          <h2 class="slim-logo">
+              <a href="index.html"></a>
+            </h2>
+        </div>
+      </div>
+      <!-- slim-header-left -->
+      <div class="slim-header-right">
+        <div class="card-text">
+        
+               NetworkSpeed: <spawn id="hashrate"></spawn> MH/s<p id="currentDate"></p>
+      
+        </div>
+      </div>
+        <!-- search-box -->
+        <!--<div id="langSelector">
+          <select id="newLang" class="form-control form-control-sm select2">
+            <option value="en" selected="selected">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="it">Italiano</option>
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+            <option value="ca">Català</option>
+            <option value="ko">한국어</option>
+            <option value="zh-CN">简体中文</option>
+          </select>
+        </div>-->
+      </div>
+      <!-- header-right -->
+    </div>
+    <!-- container -->
+  <!-- slim-header -->
+
+  <div class="slim-navbar">
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link hot_link" data-page="dashboard.html" href="#">
+            <i class="icon ion-ios-home-outline"></i>
+            <span tkey="dashboard">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link hot_link" data-page="about.html" href="#about">
+            <i class="icon ion-ios-home-outline"></i>
+            <span tkey="about">about</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link hot_link" data-page="roadmap.html" href="#roadmap">
+            <i class="icon ion-ios-home-outline"></i>
+            <span tkey="roadmap">roadmap</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hot_link" data-page="downloads.html" href="#downloads">
+            <i class="icon ion-ios-filing-outline"></i>
+            <span tkey="downloads">downloads</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hot_link" data-page="exchanges.html" href="#exchanges">
+            <i class="icon ion-ios-analytics-outline"></i>
+            <span tkey="exchanges">exchanges</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link hot_link" data-page="team.html" href="#team">
+            <i class="icon ion-ios-analytics-outline"></i>
+            <span tkey="team">team</span>
+          </a>
+        </li>
+        <!--drop down nav -->
+        <li class="nav-item with-sub">
+          <a class="nav-link" href="#" data-toggle="dropdown" id="toolsNavItem">
+            <i class="icon ion-ios-analytics-outline"></i>
+            <span tkey="resources">other</span>
+          </a>
+          <div class="sub-item">
+            <ul>
+              <li>
+                <a class="hot_link" data-page="api.html" href="#api">
+                  <i class="fa fa-gears icon-dropdown"></i><span tkey="api">API</span>
+                </a>
+              </li>
+              <li>
+                <a class="hot_link" data-page="check_funds.html" href="#check_funds">
+                  <i class="fa ion-android-checkbox-outline icon-dropdown"></i><span tkey="bp">Balance Proof</span>
+                </a>
+              </li>
+              <li>
+                <a class="hot_link" data-page="txviewer.html" href="#txviewer">
+                  <i class="fa ion-ios-book-outline icon-dropdown"></i><span tkey="txViewer">TX Viewer</span>
+                </a>
+              </li>
+              <li>
+                <a class="hot_link" data-page="nodes.html" href="#infra">
+                  <i class="fa ion-ios-book-outline icon-dropdown"></i><span tkey="infra">Infrastructure</span>
+                </a>
+              </li>
+              <li>
+                <a class="hot_link" data-page="charts.html" href="#charts">
+                  <i class="fa ion-ios-book-outline icon-dropdown"></i><span tkey="charts">charts</span>
+                </a>
+            </ul>
+          </div>
+        </li>
+      </ul>
+  <!-- slim-navbar -->
+
+  <div id="content">
+    <div class="container">
+      <div id="page"></div>
+      <p id="loading" class="text-center">
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+      </p>
+    </div>
+  </div>
+
+      <div class="slim-footer" id="explorerFooter">
+        <div class="container">
+          <p>Copyright 2019 &copy; NashCash. All Rights Reserved.<br> <a href="https://conceal.network/" target="_blank">Partially based on Conceal Explorer</a></p>
+        </div>
+        <!-- container -->
+      </div>
+      <!-- slim-footer -->
+    </div> 
+   </div>
+
+
+</body>
+
+</html>
